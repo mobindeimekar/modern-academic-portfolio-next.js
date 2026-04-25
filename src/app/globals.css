@@ -1,26 +1,215 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME SYSTEM
+========================= */
+
+@theme {
+  --color-bg: #0B0F19;
+  --color-primary: #00F5D4;
+  --color-secondary: #1B2430;
+  --color-text: #E6EDF3;
+  --color-muted: #9CA3AF;
+
+
+  --shadow-glow-soft: 0 0 15px -4px var(--color-primary),
+    inset 0 0 15px -6px var(--color-primary);
+
+  --shadow-glow-strong: 0 0 35px -2px var(--color-primary),
+    inset 0 0 15px -5px var(--color-primary);
+}
+
+/* =========================
+   THEMES
+========================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #0B0F19;
+  --color-primary: #00F5D4;
+  --color-secondary: #1B2430;
+  --color-text: #E6EDF3;
+  --color-muted: #9CA3AF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-primary: #2563eb;
+  --color-secondary: #f3f4f6;
+  --color-text: #0f172a;
+  --color-muted: #6b7280; /* خاکستری نرم */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="nord"] {
+  --color-bg: #2e3440;
+  --color-primary: #88c0d0;
+  --color-secondary: #3b4252;
+  --color-text: #eceff4;
+  --color-muted: #d8dee9; /* روشن‌تر از text */
+}
+
+[data-theme="lavender"] {
+  --color-bg: #faf5ff;
+  --color-primary: #8b5cf6;
+  --color-secondary: #ede9fe;
+  --color-text: #3b0764;
+  --color-muted: #571d89; /* بنفش ملایم */
+}
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  scrollbar-width: thin;
+  word-spacing: 2;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/* =========================
+   FONTS
+========================= */
+
+:not(i) {
+  font-family: var(--font-iransans), sans-serif;
+}
+
+.ss02 {
+  font-feature-settings: "ss02";
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* =========================
+   TEXT EFFECTS
+========================= */
+
+.text-shadow {
+  text-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.text-shadow-primary {
+  text-shadow: 0 0 12px var(--color-primary);
+}
+
+/* =========================
+   SHADOW UTILITIES
+========================= */
+
+.shadow-glow-soft {
+  box-shadow: var(--shadow-glow-soft);
+}
+
+.shadow-glow-strong {
+  box-shadow: var(--shadow-glow-strong);
+}
+
+.box-shadow-xl {
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+
+.box-shadow-md {
+  box-shadow: rgba(149,157,165,0.2) 0px 6px 24px;
+}
+
+.box-shadow-sm {
+  box-shadow: rgba(149,157,165,0.15) 0px 0px 10px;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-muted) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
+}
+
+.swiper-pagination {
+  z-index: 2;
+}
+
+/* arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primary) !important;
+  text-shadow: 0 0 10px var(--color-primary);
+  transition: 0.2s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  scale: 1.1;
+}
+
+
+
+
+/* =========================
+   BREAKPOINTS
+========================= */
+
+@media (max-width: 576px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
 }
