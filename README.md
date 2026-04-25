@@ -5,14 +5,14 @@ A modern academic portfolio website built with Next.js (App Router), Tailwind CS
 ## 🚀 Features
 
 - ⚡ Performance-optimized
-- 🎨 Smooth stagger animations
+- 🎨 Smooth animations
 - 📱 Fully responsive
 - 🔍 SEO-friendly structure
 - 🧩 Clean and scalable architecture
 
 ## 🛠 Tech Stack
 
-- Next.js 14+
+- Next.js 16
 - Tailwind CSS
 - Framer Motion
 - Swiper.js
