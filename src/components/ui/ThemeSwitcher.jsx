@@ -29,7 +29,7 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 p-3 rounded-xl bg-secondary/50 backdrop-blur-md shadow-lg border border-white/10">
+    <div className="fixed bottom-5 left-5 z-50 p-3 rounded-xl bg-secondary/50 backdrop-blur-md shadow-lg border border-white/10">
 
       <div className="flex flex-col gap-3">
 

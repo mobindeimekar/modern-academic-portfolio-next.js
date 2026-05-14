@@ -18,10 +18,7 @@ export default function Hero() {
                 
                 {/* description */}
                 <FadeIn direction="left" delay={0.8} distance={80}>
-                    <div className="w-full min-h-[80vh] md:min-h-[100vh] flex flex-col justify-center text-center md:text-right px-5">
-
-
-
+                    <div className="w-full min-h-[60vh] md:min-h-[100vh] flex flex-col justify-center text-center md:text-right px-5">
 
                         <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl">
                             دکتر محمد علیزاده
@@ -49,7 +46,7 @@ export default function Hero() {
 
 
                 <FadeIn direction="right" delay={0.8} distance={80} margin='0px' className="w-full">
-                    <div className="w-full min-h-[80vh] md:min-h-[100vh] overflow-hidden md:pt-20 -mt-25 md:mt-0 ">
+                    <div className="w-full min-h-[60vh] md:min-h-[100vh] overflow-hidden md:pt-20 -mt-25 md:mt-0 ">
                         <div className="relative w-full h-[80vh] md:h-[100vh]">
                             <Image
                                 sizes="(max-width: 768px) 100vw, 50vw"
